@@ -1,0 +1,15 @@
+import json
+
+x = '{
+  "name": "John",
+  "age": "30",
+  "married": "true",
+  "divorced": "false",
+  "children": "Billy",
+  "pets": "null"
+  
+}'
+
+y=json.loads(x)
+
+print(y["age"])

@@ -1,0 +1,29 @@
+Mode switching
+i Enter insert mode
+: Enter command mode
+R Enter replace mode
+v Enter visual mode (highlighting)
+V Enter visual line mode (highlighting lines)
+esc Return to normal mode from insert or replace mode
+esc+esc Return to normal mode from command or visual mode
+Copy/pasting
+Within vim
+y Yank
+c ‘Change’; cut and enter insert mode
+C Change the rest of the current line
+d Delete; cut but remain in normal mode
+D Delete the rest of the current line
+p Paste after the cursor
+P Paste before the cursor
+x Delete characters after the cursor
+X Delete characters before the cursor
+Copy/paste commands operate on the specified range. If in visual mode, that range is the
+highlighted text. If in normal mode, that range is specified by a series of modifiers to the
+commands:
+cw Change one word
+c4w Change four words
+c4l Change four letters
+cc Change current line
+4x Change four characters after the cursor
+4p Paste five times after the cursor.
+Modifiers work similarly for cut, delete, yank and paste.
