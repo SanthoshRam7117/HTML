@@ -1,0 +1,60 @@
+<html>
+<head>
+<title>A simple VBScript Calculator</title>
+<script language = "VBscript">
+Dim Novalue
+Novalue = 0
+
+Function Math(val)
+If (Novalue = 1) Then
+document.f.ans.value = ""
+Novalue = 0
+End If
+document.f.ans.value=document.f.ans.value+val
+End Function
+
+Function equals()
+document.f.ans.value=eval(document.f.ans.value)
+Novalue = 1
+End Function
+
+Function Clear()
+document.f.ans.value = ""
+End Function
+</script>
+</head>
+<body>
+<form name ="f">
+<center>
+<BR>
+<table width="184" height="180" border="2">
+<tr>
+<td colspan="4"><input name = "ans" type = "text" size="0"></td>
+</tr>
+<tr> <td width="41"><input type = "button" value = " 7 " name = "7" onclick = "Call Math('7')"></td>
+<td width="41"><input type = "button" value = " 8 " name = "8" onclick = "Call Math('8')"></td>
+<td width="41"><input type = "button" value = " 9 " name = "9" onclick = "Call Math('9')"></td>
+<td width="41"><input type = "button" value = " / " name = "/" onclick = "Call Math('/')"></td>
+</tr>
+<tr> <td><input type = "button" value = " 4 " name = "4" onclick = "Call Math('4')"></td>
+<td><input type = "button" value = " 5 " name = "5" onclick = "Call Math('5')"></td>
+<td><input type = "button" value = " 6 " name = "6" onclick = "Call Math('6')"></td>
+<td><input type = "button" value = " * " name = "*" onclick = "Call Math('*')"></td> </tr>
+<tr> <td><input type = "button" value = " 1 " name = "1" onclick = "Call Math('1')"></td>
+<td><input type = "button" value = " 2 " name = "2" onclick = "Call Math('2')"></td>
+<td><input type = "button" value = " 3 " name = "3" onclick = "Call Math('3')"></td>
+<td><input type = "button" value = " - " name = "-" onclick = "Call Math('-')"></td> </tr>
+<tr>
+<td colspan="3"><input type = "button" value = " + " name = "+" onclick = "Call Math('+')"></td>
+<td rowspan="2"><input height="40" type = "button" value = " = " name = "=" onclick = "Call equals"></td>
+</tr>
+<tr>
+<td height="28" colspan="3"><input name="button" type = "button" onclick = "Call Clear" value = " Clear All "></td>
+</tr>
+</table>
+<br>
+<br>
+</center>
+</form>
+</body>
+</html>
